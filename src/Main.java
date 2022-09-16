@@ -8,22 +8,17 @@ public class Main {
 
         if (finalScore > threshold) {
             bonus = (finalScore - replenishmentAmount) / 100;
-            {
-            }
         } else {
             bonus = 0;
         }
-
         if (replenishmentAmount <= 1000) {
             bonus = (replenishmentAmount + currentSum - threshold) / 100;
-            if (bonus <= 0) System.out.println("Ваш баланс равен " + finalScore);
-            if (bonus > 0) {
+            if (bonus <= 0) {
+                System.out.println("Ваш баланс равен " + finalScore);
+            } else {
                 System.out.println("Ваш бонус равен " + bonus);
                 System.out.println("Ваш баланс равен " + finalScore);
-
             }
         }
-
-
     }
 }
